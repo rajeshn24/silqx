@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILQX — Luxury Seamless Innerwear & Loungewear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FBF9F7;
+            --text-primary: #1A1A1A;
+            --text-secondary: #6B6865;
+            --accent-color: #D4B5A5;
+            --card-bg: #F0ECE6;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header / Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: rgba(251, 249, 247, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 0.2rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .cart-btn {
+            background: var(--text-primary);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .cart-btn:hover {
+            background: var(--accent-color);
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            padding: 0 5%;
+            padding-top: 6rem;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .hero-content h1 span {
+            font-style: italic;
+            color: var(--accent-color);
+        }
+
+        .hero-content p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 450px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--text-primary);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-color);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--text-primary);
+            color: var(--text-primary);
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background: var(--text-primary);
+            color: #fff;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            height: 80vh;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Features Bar */
+        .features-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 5rem 5%;
+            background-color: var(--card-bg);
+            text-align: center;
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Products Showcase Section */
+        .products-section {
+            padding: 6rem 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+        }
+
+        .product-img {
+            height: 380px;
+            width: 100%;
+            background-color: #eee;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-details h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .product-details p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .product-price {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-primary);
+            color: #fff;
+            padding: 4rem 5% 2rem 5%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            letter-spacing: 0.2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 7rem;
+                gap: 2rem;
+            }
+            .hero-image-wrapper {
+                height: 50vh;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .features-bar {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">SILQX</a>
+        <ul class="nav-links">
+            <li><a href="#shop">Shop All</a></li>
+            <li><a href="#features">The Fabric</a></li>
+            <li><a href="#story">Our Story</a></li>
+        </ul>
+        <a href="#shop" class="cart-btn">Shop Collection</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Second-Skin Comfort, <span>Elevated</span>.</h1>
+            <p>Discover luxury seamless innerwear engineered to move fluidly with your body. Zero lines, absolute softness, and effortless elegance.</p>
+            <div class="cta-group">
+                <a href="#shop" class="btn-primary">Explore Collection</a>
+                <a href="#features" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=1000" alt="Woman wearing SILQX minimal apparel">
+        </div>
+    </section>
+
+    <section class="features-bar" id="features">
+        <div class="feature-item">
+            <h3>Featherlight Feel</h3>
+            <p>Engineered with ultra-fine microfiber blends that feel invisible against your skin.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Zero Show-Through</h3>
+            <p>Laser-cut seamless edges guarantee absolute invisibility under any outfit.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Breathe Easy</h3>
+            <p>Temperature-regulating, moisture-wicking fabrics designed for all-day freshness.</p>
+        </div>
+    </section>
+
+    <section class="products-section" id="shop">
+        <div class="section-header">
+            <h2>The Essentials</h2>
+            <p>Curated pieces designed to become your everyday second skin.</p>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" alt="SILQX Seamless Bralette">
+                </div>
+                <div class="product-info">
+                    <div class="product-details">
+                        <h3>The Signature Bralette</h3>
+                        <p>Seamless support</p>
+                    </div>
+                    <div class="product-price">$48</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=800" alt="SILQX Everyday Brief">
+                </div>
+                <div class="product-info">
+                    <div class="product-details">
+                        <h3>Everyday Seamless Brief</h3>
+                        <p>Zero-line finish</p>
+                    </div>
+                    <div class="product-price">$24</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=800" alt="SILQX Lounge Set">
+                </div>
+                <div class="product-info">
+                    <div class="product-details">
+                        <h3>Silk-Blend Lounge Rib Crop</h3>
+                        <p>Ultra-soft comfort</p>
+                    </div>
+                    <div class="product-price">$62</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">SILQX</div>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SILQX.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
