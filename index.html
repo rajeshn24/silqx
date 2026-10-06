@@ -3,193 +3,273 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SILQX Sports | STUNFOX Organisation</title>
+<title>SILQX SPORTS | STUNFOX ORGANISATION</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+--black:#05070A;
+--dark:#0F1720;
+--card:#161D28;
+--white:#FFFFFF;
+--silver:#D8DDE5;
+--lime:#C6FF00;
+--lime-dark:#A5D800;
+}
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,Arial,sans-serif;
+font-family:'Orbitron',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-background:#05070A;
-color:#fff;
+background:var(--black);
+color:white;
 }
 
 header{
-position:sticky;
+position:fixed;
 top:0;
-z-index:100;
-background:#0b0f16;
-padding:18px 8%;
+left:0;
+width:100%;
+z-index:1000;
+background:rgba(5,7,10,.95);
+backdrop-filter:blur(10px);
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-border-bottom:1px solid #1d2533;
+border-bottom:1px solid rgba(198,255,0,.15);
 }
 
-.logo{
-font-size:42px;
-font-weight:900;
-letter-spacing:3px;
-}
-
-.logo .x{
-color:#1DA1FF;
-text-shadow:0 0 15px #1DA1FF;
+.brand{
+display:flex;
+flex-direction:column;
 }
 
 .umbrella{
-font-size:12px;
-color:#9aa6b2;
-letter-spacing:2px;
+font-size:11px;
+color:#8a919c;
+letter-spacing:3px;
+}
+
+.logo{
+font-size:48px;
+font-weight:900;
+letter-spacing:4px;
+}
+
+.logo .x{
+color:var(--lime);
+text-shadow:
+0 0 10px var(--lime),
+0 0 20px var(--lime),
+0 0 40px var(--lime);
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
-font-weight:600;
+margin-left:25px;
+font-size:14px;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--lime);
 }
 
 .hero{
-height:90vh;
+height:100vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 padding:20px;
 background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600');
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1800');
 background-size:cover;
 background-position:center;
 }
 
 .hero h1{
-font-size:90px;
+font-size:120px;
 font-weight:900;
 }
 
 .hero h1 span{
-color:#1DA1FF;
-text-shadow:0 0 20px #1DA1FF;
+color:var(--lime);
+text-shadow:
+0 0 15px var(--lime),
+0 0 35px var(--lime);
+}
+
+.hero h2{
+font-size:24px;
+margin-top:10px;
+letter-spacing:8px;
+color:var(--silver);
 }
 
 .hero p{
-font-size:24px;
-margin-top:15px;
-color:#d0d8e2;
+margin-top:25px;
+font-size:20px;
+color:#b9c0ca;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#1DA1FF;
-color:white;
+margin-top:40px;
+padding:18px 40px;
+background:var(--lime);
+color:black;
+font-weight:800;
+border-radius:50px;
 text-decoration:none;
-border-radius:30px;
-font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 25px var(--lime);
 }
 
 .section{
-padding:80px 8%;
+padding:100px 8%;
 }
 
-.section-title{
+.title{
 text-align:center;
-font-size:42px;
-margin-bottom:50px;
+font-size:48px;
+margin-bottom:60px;
 }
 
-.grid{
+.title span{
+color:var(--lime);
+}
+
+.products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
 .card{
-background:#10161f;
-border:1px solid #1f2937;
-border-radius:18px;
-padding:25px;
+background:var(--card);
+padding:30px;
+border-radius:20px;
 text-align:center;
+border:1px solid transparent;
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-border-color:#1DA1FF;
-box-shadow:0 0 25px rgba(29,161,255,.3);
-}
-
-.icon{
-font-size:50px;
-margin-bottom:15px;
+transform:translateY(-10px);
+border:1px solid var(--lime);
+box-shadow:0 0 30px rgba(198,255,0,.25);
 }
 
 .card h3{
+margin-top:15px;
 margin-bottom:10px;
 }
 
 .card p{
-color:#aab6c4;
+color:#a8b1bc;
+font-size:14px;
+line-height:1.6;
+}
+
+.icon{
+font-size:50px;
 }
 
 .features{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
 .feature{
-background:#10161f;
-padding:25px;
-border-radius:15px;
+background:var(--card);
+padding:30px;
+border-radius:20px;
 text-align:center;
 }
 
+.feature h3{
+color:var(--lime);
+margin-bottom:15px;
+}
+
 .about{
-background:#0d131c;
+background:var(--dark);
 text-align:center;
 }
 
 .about p{
 max-width:900px;
 margin:auto;
-line-height:1.8;
-color:#c2ccd8;
+line-height:2;
+color:#c6ccd4;
 font-size:18px;
 }
 
-footer{
-background:#020305;
-padding:40px;
+.cta{
 text-align:center;
-color:#9aa6b2;
+background:linear-gradient(135deg,#0c121b,#111827);
+}
+
+.cta h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+footer{
+padding:50px;
+background:#020305;
+text-align:center;
+color:#8b949e;
+}
+
+footer h3{
+color:white;
+margin-bottom:15px;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:55px;
+font-size:65px;
 }
 
-.hero p{
-font-size:18px;
+.hero h2{
+font-size:16px;
+letter-spacing:4px;
 }
 
 .logo{
-font-size:30px;
+font-size:34px;
 }
 
 nav{
 display:none;
 }
+
+.title{
+font-size:34px;
 }
+}
+
 </style>
 </head>
 
@@ -197,17 +277,21 @@ display:none;
 
 <header>
 
-<div>
-<div class="umbrella">STUNFOX ORGANISATION</div>
+<div class="brand">
+
+<div class="umbrella">
+STUNFOX ORGANISATION
+</div>
 
 <div class="logo">
 SILQ<span class="x">X</span>
 </div>
+
 </div>
 
 <nav>
-<a href="#">Home</a>
 <a href="#products">Products</a>
+<a href="#features">Features</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -218,14 +302,18 @@ SILQ<span class="x">X</span>
 
 <div>
 
-<h1>SILQ<span>X</span></h1>
+<h1>
+SILQ<span>X</span>
+</h1>
 
-<p>SPORTS</p>
+<h2>SPORTS</h2>
 
-<p>MOVE • PERFORM • GO FURTHER</p>
+<p>
+MOVE • PERFORM • GO FURTHER
+</p>
 
 <a href="#products" class="btn">
-Explore Collection
+EXPLORE COLLECTION
 </a>
 
 </div>
@@ -234,126 +322,126 @@ Explore Collection
 
 <section id="products" class="section">
 
-<h2 class="section-title">
-Sports Collection
+<h2 class="title">
+SILQ<span>X</span> COLLECTION
 </h2>
 
-<div class="grid">
+<div class="products">
 
 <div class="card">
 <div class="icon">🎽</div>
 <h3>Headbands</h3>
-<p>Performance training headbands</p>
+<p>Performance sweat control headbands.</p>
 </div>
 
 <div class="card">
 <div class="icon">💪</div>
 <h3>Wristbands</h3>
-<p>Comfort grip sweat wristbands</p>
+<p>Premium workout wristbands.</p>
 </div>
 
 <div class="card">
 <div class="icon">🧺</div>
 <h3>Gym Towels</h3>
-<p>Quick dry premium towels</p>
+<p>Quick-dry premium sports towels.</p>
 </div>
 
 <div class="card">
 <div class="icon">🧴</div>
 <h3>Water Bottles</h3>
-<p>Hydration for every workout</p>
+<p>Hydration built for athletes.</p>
 </div>
 
 <div class="card">
 <div class="icon">🧢</div>
 <h3>Sports Caps</h3>
-<p>Breathable activewear caps</p>
+<p>Breathable performance caps.</p>
 </div>
 
 <div class="card">
 <div class="icon">👜</div>
 <h3>Gym Duffel Bags</h3>
-<p>Travel and workout companion</p>
+<p>Premium travel and gym companion.</p>
 </div>
 
 <div class="card">
 <div class="icon">🎒</div>
 <h3>Sports Backpacks</h3>
-<p>Built for training and travel</p>
+<p>Built for training and outdoor use.</p>
 </div>
 
 <div class="card">
 <div class="icon">🧘</div>
 <h3>Yoga Mats</h3>
-<p>Comfort and stability</p>
+<p>Comfort and grip for every session.</p>
 </div>
 
 <div class="card">
 <div class="icon">👕</div>
 <h3>Dry-Fit T-Shirts</h3>
-<p>Moisture wicking performance</p>
+<p>Lightweight moisture-wicking fabric.</p>
 </div>
 
 <div class="card">
 <div class="icon">🏃</div>
 <h3>Tank Tops</h3>
-<p>Maximum freedom of movement</p>
+<p>Maximum movement and comfort.</p>
 </div>
 
 <div class="card">
 <div class="icon">🩳</div>
 <h3>Sports Shorts</h3>
-<p>Lightweight training shorts</p>
+<p>Performance-ready athletic shorts.</p>
 </div>
 
 <div class="card">
 <div class="icon">⚡</div>
 <h3>Compression Wear</h3>
-<p>Support and recovery wear</p>
+<p>Support, stability and recovery.</p>
 </div>
 
 <div class="card">
 <div class="icon">🧦</div>
 <h3>Sports Socks</h3>
-<p>All-day athletic comfort</p>
+<p>All-day sports comfort.</p>
 </div>
 
 <div class="card">
 <div class="icon">👟</div>
 <h3>Sports Shoes</h3>
-<p>Future SILQX footwear collection</p>
+<p>Future SILQX footwear collection.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section id="features" class="section">
 
-<h2 class="section-title">
-Why SILQX?
+<h2 class="title">
+WHY SILQ<span>X</span>
 </h2>
 
 <div class="features">
 
 <div class="feature">
-<h3>Lightweight</h3>
+<h3>LIGHTWEIGHT</h3>
 <p>Designed for unrestricted movement.</p>
 </div>
 
 <div class="feature">
-<h3>Breathable</h3>
+<h3>BREATHABLE</h3>
 <p>Stay cool during intense workouts.</p>
 </div>
 
 <div class="feature">
-<h3>Moisture Wicking</h3>
-<p>Stay dry and focused.</p>
+<h3>MOISTURE WICKING</h3>
+<p>Stay dry and focused every day.</p>
 </div>
 
 <div class="feature">
-<h3>Durable</h3>
-<p>Built for everyday performance.</p>
+<h3>DURABLE</h3>
+<p>Built to perform for years.</p>
 </div>
 
 </div>
@@ -362,44 +450,54 @@ Why SILQX?
 
 <section id="about" class="section about">
 
-<h2 class="section-title">
-About SILQX
+<h2 class="title">
+ABOUT SILQ<span>X</span>
 </h2>
 
 <p>
-SILQX Sports is a premium activewear and sports accessories brand
-created under STUNFOX ORGANISATION.
-Our mission is to provide athletes, fitness enthusiasts and
-everyday performers with products that combine style,
-comfort and performance.
+SILQX SPORTS is the premium sports and activewear division of
+STUNFOX ORGANISATION. Designed for athletes, fitness enthusiasts,
+runners, cyclists, gym lovers and everyday performers.
+Our mission is to deliver premium quality sports gear that combines
+performance, durability and style.
 </p>
+
+</section>
+
+<section class="section cta">
+
+<h2>
+READY TO MOVE FURTHER?
+</h2>
+
+<a href="#" class="btn">
+SHOP SILQX
+</a>
 
 </section>
 
 <footer id="contact">
 
-<h2>SILQX SPORTS</h2>
+<h3>SILQX SPORTS</h3>
+
+<p>A Brand of STUNFOX ORGANISATION</p>
+
+<br>
 
 <p>
-A Brand of STUNFOX ORGANISATION
+Headbands • Wristbands • Towels • Bottles • Caps • Bags • Apparel • Footwear
 </p>
 
 <br>
 
 <p>
-Accessories • Apparel • Training Gear
+info@silqxsports.com
 </p>
 
 <br>
 
 <p>
-Email: info@silqxsports.com
-</p>
-
-<br>
-
-<p>
-© 2026 SILQX Sports. All Rights Reserved.
+© 2026 SILQX SPORTS. All Rights Reserved.
 </p>
 
 </footer>
