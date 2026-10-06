@@ -65,20 +65,14 @@ letter-spacing:3px;
 font-size:48px;
 font-weight:900;
 letter-spacing:4px;
-display: flex;
-align-items: center;
 }
 
-.silqx-word {
-display: inline-block;
-height: 1em;
-width: 4.4em;
-vertical-align: -0.1em;
-}
-
-.silqx-word .x-path {
-fill: var(--lime);
-filter: drop-shadow(0 0 10px var(--lime)) drop-shadow(0 0 20px var(--lime));
+.logo .x{
+color:var(--lime);
+text-shadow:
+0 0 10px var(--lime),
+0 0 20px var(--lime),
+0 0 40px var(--lime);
 }
 
 nav a{
@@ -110,9 +104,13 @@ background-position:center;
 .hero h1{
 font-size:120px;
 font-weight:900;
-display: flex;
-align-items: center;
-justify-content: center;
+}
+
+.hero h1 span{
+color:var(--lime);
+text-shadow:
+0 0 15px var(--lime),
+0 0 35px var(--lime);
 }
 
 .hero h2{
@@ -153,11 +151,10 @@ padding:100px 8%;
 text-align:center;
 font-size:48px;
 margin-bottom:60px;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 15px;
-flex-wrap: wrap;
+}
+
+.title span{
+color:var(--lime);
 }
 
 .products{
@@ -287,22 +284,7 @@ STUNFOX ORGANISATION
 </div>
 
 <div class="logo">
-<svg class="silqx-word" viewBox="0 0 440 100" fill="currentColor">
-  <!-- S -->
-  <path d="M12 12h56v20H32v14h36v42H12V68h36V54H12z"/>
-  <!-- I -->
-  <path d="M78 12h20v76H78z"/>
-  <!-- L -->
-  <path d="M108 12h20v56h36v20h-56z"/>
-  <!-- Q Outer -->
-  <path d="M174 12h62c18 0 26 7 26 25v38c0 18-8 25-26 25h-62c-18 0-26-7-26-25V37c0-18 8-25 26-25zm20 16h22c4 0 6 2 6 6v32c0 4-2 6-6 6h-22c-4 0-6-2-6-6V34c0-4 2-6 6-6z"/>
-  <!-- Q Inner Cutout -->
-  <path fill="var(--black)" d="M194 28h22c4 0 6 2 6 6v32c0 4-2 6-6 6h-22c-4 0-6-2-6-6V34c0-4 2-6 6-6z"/>
-  <!-- Q Tail -->
-  <polygon points="222,62 254,94 264,84 232,52"/>
-  <!-- X (Lime with Glow) -->
-  <path class="x-path" d="M310 12h26l32 38 32-38h26l-42 50 42 26h-26l-32-38-32 38h-26l42-50z"/>
-</svg>
+SILQ<span class="x">X</span>
 </div>
 
 </div>
@@ -321,15 +303,7 @@ STUNFOX ORGANISATION
 <div>
 
 <h1>
-<svg class="silqx-word" viewBox="0 0 440 100" fill="currentColor">
-  <path d="M12 12h56v20H32v14h36v42H12V68h36V54H12z"/>
-  <path d="M78 12h20v76H78z"/>
-  <path d="M108 12h20v56h36v20h-56z"/>
-  <path d="M174 12h62c18 0 26 7 26 25v38c0 18-8 25-26 25h-62c-18 0-26-7-26-25V37c0-18 8-25 26-25zm20 16h22c4 0 6 2 6 6v32c0 4-2 6-6 6h-22c-4 0-6-2-6-6V34c0-4 2-6 6-6z"/>
-  <path fill="var(--black)" d="M194 28h22c4 0 6 2 6 6v32c0 4-2 6-6 6h-22c-4 0-6-2-6-6V34c0-4 2-6 6-6z"/>
-  <polygon points="222,62 254,94 264,84 232,52"/>
-  <path class="x-path" d="M310 12h26l32 38 32-38h26l-42 50 42 26h-26l-32-38-32 38h-26l42-50z"/>
-</svg>
+SILQ<span>X</span>
 </h1>
 
 <h2>SPORTS</h2>
@@ -349,15 +323,7 @@ EXPLORE COLLECTION
 <section id="products" class="section">
 
 <h2 class="title">
-<svg class="silqx-word" viewBox="0 0 440 100" fill="currentColor">
-  <path d="M12 12h56v20H32v14h36v42H12V68h36V54H12z"/>
-  <path d="M78 12h20v76H78z"/>
-  <path d="M108 12h20v56h36v20h-56z"/>
-  <path d="M174 12h62c18 0 26 7 26 25v38c0 18-8 25-26 25h-62c-18 0-26-7-26-25V37c0-18 8-25 26-25zm20 16h22c4 0 6 2 6 6v32c0 4-2 6-6 6h-22c-4 0-6-2-6-6V34c0-4 2-6 6-6 z"/>
-  <path fill="var(--black)" d="M194 28h22c4 0 6 2 6 6v32c0 4-2 6-6 6h-22c-4 0-6-2-6-6V34c0-4 2-6 6-6z"/>
-  <polygon points="222,62 254,94 264,84 232,52"/>
-  <path class="x-path" d="M310 12h26l32 38 32-38h26l-42 50 42 26h-26l-32-38-32 38h-26l42-50z"/>
-</svg> COLLECTION
+SILQ<span>X</span> COLLECTION
 </h2>
 
 <div class="products">
@@ -453,15 +419,7 @@ EXPLORE COLLECTION
 <section id="features" class="section">
 
 <h2 class="title">
-WHY <svg class="silqx-word" viewBox="0 0 440 100" fill="currentColor">
-  <path d="M12 12h56v20H32v14h36v42H12V68h36V54H12z"/>
-  <path d="M78 12h20v76H78z"/>
-  <path d="M108 12h20v56h36v20h-56z"/>
-  <path d="M174 12h62c18 0 26 7 26 25v38c0 18-8 25-26 25h-62c-18 0-26-7-26-25V37c0-18 8-25 26-25zm20 16h22c4 0 6 2 6 6v32c0 4-2 6-6 6h-22c-4 0-6-2-6-6V34c0-4 2-6 6-6z"/>
-  <path fill="var(--black)" d="M194 28h22c4 0 6 2 6 6v32c0 4-2 6-6 6h-22c-4 0-6-2-6-6V34c0-4 2-6 6-6z"/>
-  <polygon points="222,62 254,94 264,84 232,52"/>
-  <path class="x-path" d="M310 12h26l32 38 32-38h26l-42 50 42 26h-26l-32-38-32 38h-26l42-50z"/>
-</svg>
+WHY SILQ<span>X</span>
 </h2>
 
 <div class="features">
@@ -493,15 +451,7 @@ WHY <svg class="silqx-word" viewBox="0 0 440 100" fill="currentColor">
 <section id="about" class="section about">
 
 <h2 class="title">
-ABOUT <svg class="silqx-word" viewBox="0 0 440 100" fill="currentColor">
-  <path d="M12 12h56v20H32v14h36v42H12V68h36V54H12z"/>
-  <path d="M78 12h20v76H78z"/>
-  <path d="M108 12h20v56h36v20h-56z"/>
-  <path d="M174 12h62c18 0 26 7 26 25v38c0 18-8 25-26 25h-62c-18 0-26-7-26-25V37c0-18 8-25 26-25zm20 16h22c4 0 6 2 6 6v32c0 4-2 6-6 6h-22c-4 0-6-2-6-6V34c0-4 2-6 6-6z"/>
-  <path fill="var(--black)" d="M194 28h22c4 0 6 2 6 6v32c0 4-2 6-6 6h-22c-4 0-6-2-6-6V34c0-4 2-6 6-6z"/>
-  <polygon points="222,62 254,94 264,84 232,52"/>
-  <path class="x-path" d="M310 12h26l32 38 32-38h26l-42 50 42 26h-26l-32-38-32 38h-26l42-50z"/>
-</svg>
+ABOUT SILQ<span>X</span>
 </h2>
 
 <p>
